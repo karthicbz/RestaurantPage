@@ -1,1 +1,1 @@
-console.log('I am from index.js');
+import '../styles/style.css';
