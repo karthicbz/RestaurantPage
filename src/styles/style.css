@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-p{
-    color: cyan;
-    font-size: 3rem;
+body{
+    background: url('../assets/background.jpg');
+    background-position: 100% 100%;
 }
