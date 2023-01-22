@@ -10,4 +10,35 @@ const paras = ()=>{
     return {shopName, shopDesc};
 }
 
-export {paras};
+function importAll(r) {
+    const cache = {};
+    r.keys().forEach((key) => (cache[key] = r(key)));
+    return cache;
+}
+
+const branchDetails = ()=>{
+    const cache = importAll(require.context('../assets/', true, /\w+\d{1}.jpg$/));
+    const branchDetails = document.createElement('div');
+    branchDetails.classList.add('branch-details');
+
+    for(let key in cache){
+        const branch = document.createElement('div');
+        branch.classList.add('branch');
+        const branch_img = document.createElement('img');
+        branch_img.classList.add('branch-img');
+        branch_img.src = cache[key];
+        branch.appendChild(branch_img);
+
+        const branchName = document.createElement('p');
+        branchName.classList.add('branch-name');
+        branchName.innerText = key.replace('.jpg', '').replace('./', '').replace('_1', '');
+        branch.appendChild(branchName);
+        branchDetails.appendChild(branch);
+    }
+
+    return {branchDetails};
+}
+
+// branchDetails();
+
+export {paras, branchDetails};

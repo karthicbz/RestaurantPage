@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
 
 *{
@@ -30,27 +30,24 @@ body{
 .header>.nav>p:hover{
     text-decoration:underline;
     cursor: pointer;
-}
+} */
 
-.main-content{
+/* .main-content{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 500px;
-    /* background-color: aliceblue; */
 }
 
 .main-content>.shop-name{
     font-size: 5rem;
     font-family: 'Libre Baskerville', serif;
     color: rgb(90, 63, 12);
-    /* text-align: center; */
 }
 
 .main-content>.shop-desc{
     font-size: 1.5rem;
-    /* text-align: center; */
 }
 
 .branches{
@@ -64,4 +61,4 @@ body{
     height: 150px;
     background-color: rgba(0, 0, 0, 0.9);
     margin-top: 2rem;
-}
+}  */
