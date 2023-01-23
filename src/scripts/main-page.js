@@ -20,6 +20,11 @@ const branchDetails = ()=>{
     const cache = importAll(require.context('../assets/', true, /\w+\d{1}.jpg$/));
     const branchDetails = document.createElement('div');
     branchDetails.classList.add('branch-details');
+    const title = document.createElement('p');
+    title.innerText = 'Our Branches';
+    branchDetails.appendChild(title);
+    const branches = document.createElement('div');
+    branches.classList.add('branches');
 
     for(let key in cache){
         const branch = document.createElement('div');
@@ -33,8 +38,9 @@ const branchDetails = ()=>{
         branchName.classList.add('branch-name');
         branchName.innerText = key.replace('.jpg', '').replace('./', '').replace('_1', '');
         branch.appendChild(branchName);
-        branchDetails.appendChild(branch);
+        branches.appendChild(branch);
     }
+    branchDetails.appendChild(branches);
 
     return {branchDetails};
 }

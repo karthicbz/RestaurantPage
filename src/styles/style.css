@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
 
 *{
@@ -9,8 +9,11 @@
 
 body{
     background-image: url('../assets/parotta.jpg');
-    background-size: cover;
+    background-size: cover 100vh;
+    background-repeat: no-repeat;
 }
+
+
 
 .header>.nav{
     display: flex;
@@ -30,14 +33,15 @@ body{
 .header>.nav>p:hover{
     text-decoration:underline;
     cursor: pointer;
-} */
+}
 
-/* .main-content{
+.main-content{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 500px;
+    /* height: 500px; */
+    padding-top: 250px;
 }
 
 .main-content>.shop-name{
@@ -50,15 +54,51 @@ body{
     font-size: 1.5rem;
 }
 
-.branches{
-    width: 100%;
-    height: 500px;
+.branch-details{
     background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    margin-top: 10rem;
+}
+
+.branch-details>p{
+    font-size: 2.5rem;
+    color: #846f3a;
+    text-decoration-line: underline;
+    text-decoration-style: double;
+}
+
+.branch-details>.branches{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    padding-top: 3rem;
+}
+
+.branches>.branch>img{
+    border-radius: 5px;
+    transition: transform 0.5s;
+}
+
+.branches>.branch>img:hover{
+    /* border-radius: 5px; */
+    transform: scale(1.1, 1.1);
+}
+
+.branches>.branch>p{
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: #846f3a;
+    margin-top: 1rem;
 }
 
 .footer{
     width: 100%;
     height: 150px;
     background-color: rgba(0, 0, 0, 0.9);
-    margin-top: 2rem;
-}  */
+    margin-top: 8rem;
+} 
