@@ -35,22 +35,21 @@ body{
     cursor: pointer;
 }
 
-.main-content{
+.home{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* height: 500px; */
     padding-top: 250px;
 }
 
-.main-content>.shop-name{
+.home>.shop-name{
     font-size: 5rem;
     font-family: 'Libre Baskerville', serif;
     color: rgb(90, 63, 12);
 }
 
-.main-content>.shop-desc{
+.home>.shop-desc{
     font-size: 1.5rem;
 }
 
@@ -153,4 +152,8 @@ body{
     font-size: 1.2rem;
     font-style: italic;
     color: goldenrod;
+}
+
+.about{
+    padding-top: 250px;
 }

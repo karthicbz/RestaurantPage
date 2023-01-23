@@ -1,23 +1,29 @@
 import '../styles/style.css';
 import {makeTabs} from '../scripts/tabs';
-import { paras, branchDetails } from './main-page';
+// import { paras, branchDetails } from './main-page';
 import { footerContent } from './footer';
+import { timingComponent } from './about';
+import {homePage} from './main-page'
 
 const content = document.querySelector('#content');
 content.appendChild(makeTabs());
 const displayArea = document.createElement('div');
 displayArea.classList.add('main-content');
 content.appendChild(displayArea);
-// const footer = document.createElement('div');
-// footer.classList.add('footer');
-// footer.innerText = 'This is footer';
+
 content.appendChild(footerContent().footer);
 
-Object.keys(paras()).forEach(key=>{
-    displayArea.appendChild(paras()[key]);
-});
+displayArea.appendChild(homePage);
 
-Object.keys(branchDetails()).forEach(key=>{
-    // console.log(branchDetails()[key]);
-    displayArea.appendChild(branchDetails()[key]);
+const navs = document.querySelector('.header>.nav');
+
+navs.addEventListener('click', (e)=>{
+    if(e.target.innerText == 'Home'){
+        displayArea.innerHTML = '';
+        displayArea.appendChild(homePage);
+    }
+    else if(e.target.innerText == 'About'){
+        displayArea.innerHTML = '';
+        displayArea.appendChild(timingComponent);
+    }
 });

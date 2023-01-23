@@ -6,7 +6,6 @@ const paras = ()=>{
     const shopDesc = document.createElement('p');
     shopDesc.classList.add('shop-desc');
     shopDesc.innerText = 'We serve a delicious south indian food in a south indian themed space which makes you feel you are in 80\'s.';
-
     return {shopName, shopDesc};
 }
 
@@ -18,11 +17,11 @@ function importAll(r) {
 
 const branchDetails = ()=>{
     const cache = importAll(require.context('../assets/', true, /\w+\d{1}.jpg$/));
-    const branchDetails = document.createElement('div');
-    branchDetails.classList.add('branch-details');
+    const branchDetail = document.createElement('div');
+    branchDetail.classList.add('branch-details');
     const title = document.createElement('p');
     title.innerText = 'Our Branches';
-    branchDetails.appendChild(title);
+    branchDetail.appendChild(title);
     const branches = document.createElement('div');
     branches.classList.add('branches');
 
@@ -40,11 +39,22 @@ const branchDetails = ()=>{
         branch.appendChild(branchName);
         branches.appendChild(branch);
     }
-    branchDetails.appendChild(branches);
+    branchDetail.appendChild(branches);
 
-    return {branchDetails};
+    return {branchDetail};
 }
+
+const homePage = (()=>{
+    const home = document.createElement('div');
+    home.classList.add('home');
+    home.appendChild(paras().shopName);
+    home.appendChild(paras().shopDesc);
+    home.appendChild(branchDetails().branchDetail);
+    // console.log(home);
+    return home;
+})();
 
 // branchDetails();
 
-export {paras, branchDetails};
+// export {paras, branchDetails};
+export {homePage};
