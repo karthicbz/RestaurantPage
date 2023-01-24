@@ -44,9 +44,14 @@ const contactForm = ()=>{
     message.name = 'message';
     message.placeholder = 'type message here...';
 
+    const button = document.createElement('button');
+    button.classList.add('send-button');
+    button.textContent = 'Send';
+
     contactForm.appendChild(name);
     contactForm.appendChild(email);
     contactForm.appendChild(message);
+    contactForm.appendChild(button);
     contact.appendChild(contactForm);
 
     return contact;
@@ -57,9 +62,12 @@ const contactForm = ()=>{
 const timingComponent = (()=>{
     const timing = document.createElement('div');
     timing.classList.add('about');
-    timing.appendChild(timings().timingHead);
-    timing.appendChild(timings().timingDetails);
-    timing.appendChild(addressDetails());
+    const timingAndAddress = document.createElement('div');
+    timingAndAddress.classList.add('timing-address');
+    timingAndAddress.appendChild(timings().timingHead);
+    timingAndAddress.appendChild(timings().timingDetails);
+    timingAndAddress.appendChild(addressDetails());
+    timing.appendChild(timingAndAddress);
     timing.appendChild(contactForm());
     return timing;
 })();

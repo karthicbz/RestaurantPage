@@ -22,6 +22,7 @@ body{
     gap: 2rem;
     background-color: rgba(255, 255, 255, 1);
     position: fixed;
+    top: 0;
     width: 100%;
 }
 
@@ -35,12 +36,16 @@ body{
     cursor: pointer;
 }
 
+.main-content{
+    margin-top: 250px;
+}
+
 .home{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 250px;
+    /* padding-top: 250px; */
 }
 
 .home>.shop-name{
@@ -155,5 +160,99 @@ body{
 }
 
 .about{
-    padding-top: 250px;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    /* border-right: 2px solid #846f3a; */
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.about>.timing-address{
+    border-right: 2px solid #846f3a;
+    padding-right: 50px;
+}
+
+.timing-address>p:first-child{
+    font-size: 2rem;
+    padding-bottom: 10px;
+    color: #846f3a;
+}
+
+.timing-address>p{
+    font-size: 1.2rem;
+}
+
+.address{
+    margin-top: 20px;
+}
+
+.address>p:first-child{
+    font-size: 2rem;
+    padding-bottom: 10px;
+    color: #846f3a;
+}
+
+.address>p{
+    font-size: 1.2rem;
+}
+
+.about>.contact>form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about>.contact>p{
+    font-size: 2rem;
+    padding-bottom: 10px;
+    color: #846f3a;
+}
+
+.contact>form>input{
+    font-size: 1rem;
+    padding: 5px;
+    width: 250px;
+}
+
+.contact>form>textarea{
+    width: 250px;
+    height: 100px;
+}
+
+.contact>form>.send-button{
+    font-size: 1.2rem;
+    padding: 5px 0;
+    background-color: goldenrod;
+    border: none;
+    border-radius: 5px;
+    color: black;
+}
+
+.contact>form>.send-button:active{
+    transform: scale(0.9, 0.9);
+}
+
+.menu{
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem 0;
+}
+
+.menu>.Breakfast, .menu>.Lunch, .menu>.Dinner, .menu>.Beverages{
+    font-size: 2rem;
+    padding-bottom: 10px;
+    color: #846f3a;
+    text-decoration-style: double;
+    text-decoration-color: #846f3a;
+    text-decoration-line: underline;
+}
+
+.menu>p{
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+}
+
+.menu>p:last-child{
+    padding-bottom: 0;
 }

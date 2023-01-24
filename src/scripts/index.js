@@ -4,6 +4,7 @@ import {makeTabs} from '../scripts/tabs';
 import { footerContent } from './footer';
 import { timingComponent } from './about';
 import {homePage} from './main-page'
+import { menuDetails } from './menu';
 
 const content = document.querySelector('#content');
 content.appendChild(makeTabs());
@@ -21,6 +22,9 @@ navs.addEventListener('click', (e)=>{
     if(e.target.innerText == 'Home'){
         displayArea.innerHTML = '';
         displayArea.appendChild(homePage);
+    }else if(e.target.innerText == 'Menu'){
+        displayArea.innerHTML = '';
+        displayArea.appendChild(menuDetails);
     }
     else if(e.target.innerText == 'About'){
         displayArea.innerHTML = '';
