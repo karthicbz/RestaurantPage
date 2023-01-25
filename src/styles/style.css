@@ -13,15 +13,24 @@ body{
     background-repeat: no-repeat;
 }
 
-.header>.nav{
+.header{
+    background: wheat;
     display: flex;
     justify-content: center;
-    padding: 1.5rem 0;
-    gap: 2rem;
-    background-color: rgba(255, 255, 255, 1);
     position: fixed;
     top: 0;
     width: 100%;
+    align-items: center;
+}
+
+.header>.nav{
+    display: flex;
+    gap: 30px;
+    padding: 1rem 0;
+}
+
+.header>span{
+    display: none;
 }
 
 .header>.nav>p{
@@ -258,6 +267,23 @@ body{
 @media screen and (max-width: 415px){
     body{
         background-size: contain;
+    }
+
+    .header>span{
+        display: none;
+    }
+
+    .header>.nav{
+        padding: 0;
+        padding: 0.8rem 0;
+    }
+
+    .header>.nav>p{
+        font-size: 1.5rem;
+    }
+
+    .header>.nav>p:active{
+        background-color: burlywood;
     }
 
     .main-content{

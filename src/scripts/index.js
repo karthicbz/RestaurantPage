@@ -16,8 +16,8 @@ content.appendChild(footerContent().footer);
 
 displayArea.appendChild(homePage);
 
-const navs = document.querySelector('.header>.nav');
-const  menuItems = document.querySelectorAll('.header>.nav>p');
+const navs = document.querySelector('.header');
+const menuItems = document.querySelector('.header>span');
 
 navs.addEventListener('click', (e)=>{
     if(e.target.innerText == 'Home'){
@@ -32,9 +32,8 @@ navs.addEventListener('click', (e)=>{
         displayArea.appendChild(timingComponent);
     }
     else if(e.target.innerText === 'menu'){
-        // navs.classList.toggle('show-nav');
-        menuItems.forEach(item=>{
-            item.classList.toggle('show-nav');
-        });
+        // alert('clicked');
+        const navs = document.querySelector('.nav');
+        navs.classList.toggle('show-menu');
     }
 });
