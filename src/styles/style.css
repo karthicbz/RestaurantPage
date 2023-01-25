@@ -13,8 +13,6 @@ body{
     background-repeat: no-repeat;
 }
 
-
-
 .header>.nav{
     display: flex;
     justify-content: center;
@@ -255,4 +253,89 @@ body{
 
 .menu>p:last-child{
     padding-bottom: 0;
+}
+
+@media screen and (max-width: 415px){
+    body{
+        background-size: contain;
+    }
+
+    .main-content{
+        margin-top: 235px;
+    }
+
+    .home>.shop-name{
+        font-size: 3rem;
+        text-align: center;
+        color: rgb(238 167 32);
+    }
+    
+    .home>.shop-desc{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .branch-details>.branches{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding-top: 2rem;
+    }
+
+    .branch-details>p{
+        font-size: 2rem;
+        color: #f0f406;
+    }
+
+    .branch-details{
+        margin-top: 2rem;
+        padding: 1.5rem 0;
+        background-color: rgb(238 167 32);
+    }
+
+    .branches>.branch>p{
+        margin-top: 0.5rem;
+        color: black;
+    }
+
+    .footer>.credits{
+        flex-direction: column;
+    }
+
+    .footer{
+        margin-top: 0;
+    }
+
+    .footer>p{
+        color: #f0f405;
+    }
+
+    .web-credit{
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .menu{
+        background-color: rgb(245 180 9);
+    }
+
+    .menu>.Breakfast, .menu>.Lunch, .menu>.Dinner, .menu>.Beverages{
+        color: #19a184;
+    }
+
+    .about{
+        flex-direction: column;
+        padding-left: 10%;
+        padding-top: 20px;
+        gap: 15px;
+    }
+
+    .address{
+        margin-top: 15px;
+    }
+
+    .contact>form>.send-button{
+        width: max-content;
+        padding: 10px;
+    }
 }

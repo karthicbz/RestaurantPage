@@ -17,6 +17,7 @@ content.appendChild(footerContent().footer);
 displayArea.appendChild(homePage);
 
 const navs = document.querySelector('.header>.nav');
+const  menuItems = document.querySelectorAll('.header>.nav>p');
 
 navs.addEventListener('click', (e)=>{
     if(e.target.innerText == 'Home'){
@@ -29,5 +30,11 @@ navs.addEventListener('click', (e)=>{
     else if(e.target.innerText == 'About'){
         displayArea.innerHTML = '';
         displayArea.appendChild(timingComponent);
+    }
+    else if(e.target.innerText === 'menu'){
+        // navs.classList.toggle('show-nav');
+        menuItems.forEach(item=>{
+            item.classList.toggle('show-nav');
+        });
     }
 });
